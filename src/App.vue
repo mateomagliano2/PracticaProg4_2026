@@ -40,8 +40,6 @@ const prev = () => {
     <PaginatePost class="mb-2" @next="next" @prev="prev" />
     <hr>
     <h2>{{ favorito || "Ninguno" }}</h2>
-    <button class="btn btn-outline-primary" @click="prev">Prev</button>
-    <button class="btn btn-outline-primary" @click="next">Next</button>
     <hr>
     <BlogPost v-for="post in posts.slice(inicio, fin)" :key="post.id" :title="post.title" :id="post.id"
       :body="post.body" class="mb-2" @CambiarFavoritoNombre=cambiarFavorito />
